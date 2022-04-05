@@ -44,3 +44,7 @@ group :development do
   gem 'spring'
 end
 
+group :production do
+  gem 'rails_12factor', '0.0.2'
+  gem 'mongoid', '5.2'
+end
