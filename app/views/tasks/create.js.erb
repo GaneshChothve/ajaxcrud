@@ -1,0 +1,11 @@
+$("#mynewpost").modal('hide');
+$(".task_title").val('');
+$(".task_content").val('');
+
+<% if(@task.errors.any?) %>
+  alert("Title and content should not be blank")
+<% else %>
+  $("#container_posts").prepend('<%= j render @task %>');
+  $("#task_<%= @task.id %>").hide().fadeIn(1000);
+<% end %>
+
